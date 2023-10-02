@@ -1,4 +1,4 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 
 template <typename Type>
 
@@ -8,7 +8,7 @@ Type Min(Type a, Type b) {
 
 template<>
 char Min<char>(char a, char b) {
-	printf("”šˆÈŠO‚Í‘ã“ü‚Å‚«‚Ü‚¹‚ñ\n");
+	printf("æ•°å­—ä»¥å¤–ã¯ä»£å…¥ã§ãã¾ã›ã‚“\n");
 	return 0;
 }
 
