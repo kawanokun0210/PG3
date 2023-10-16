@@ -1,35 +1,34 @@
 ﻿#include <stdio.h>
 
-int Recursive(int n) {
-	if (n <= 100) {
-		return n * 2 - 50;
-	}
-	return (n * Recursive(n - 1));
+int TypicallyCalc(int time) {
+    return 1072 * time;
 }
 
-int main(void) {
-	
-	int n = 1;
-	int result;
-	result = Recursive(n);
-	int select = 0;
+int RecursiveCalc(int time, int HourlyWage = 100) {
+    if (time == 1) {
+        return HourlyWage;
+    }
+    return (RecursiveCalc(time - 1, HourlyWage * 2 - 50));
+}
 
-	printf("1か2を入力 : ");
-	scanf_s("%d\n", select);
+void ComparisonWage(int time) {
+    int Typically = TypicallyCalc(time);
+    int Recursive = RecursiveCalc(time);
+    printf("一般的な賃金 : %d\n", Typically);
+    printf("再帰的な賃金 : %d\n", Recursive);
+    if (Typically > Recursive) {
+        printf("一般的な賃金体系");
+    }
+    else if (Typically < Recursive) {
+        printf("再帰的な賃金体系");
+    }
+    else if (Typically == Recursive) {
+        printf("同じ");
+    }
+}
 
-	if (select == 1) {
-		printf("一般的な資金体系\n");
-	}
-	else if (select == 2) {
-		if (n == 1) {
-			printf("100円スタート\n");
-			n++;
-		}
-		else if (n > 1) {
-			printf("%d\n", result);
-			n++;
-		}
-	}
+int main() {
+    ComparisonWage(9);
 
-	return 0;
+    return 0;
 }
