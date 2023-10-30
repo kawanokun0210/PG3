@@ -16,11 +16,11 @@ int Dice() {
 void DiceResult(int diceNumber) {
 	//偶数
 	if (diceNumber % 2 == 0) {
-		printf("結果　丁\n");
+		printf("結果　丁(偶数)\n");
 	}
 	// 奇数
 	if (diceNumber % 2 == 1) {
-		printf("結果　半\n");
+		printf("結果　半(奇数)\n");
 	}
 }
 
@@ -39,7 +39,7 @@ int main() {
 
 	while (true) {
 
-		printf("1:半　2:丁\n");
+		printf("1:半(奇数)　2:丁(偶数)\n");
 		std::cin >> Answer;
 		if (Answer == 0) {
 			break;
