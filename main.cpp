@@ -28,7 +28,7 @@ void ComparisonWage(int time) {
 }
 
 int main() {
-    ComparisonWage(9);
+    ComparisonWage(8);
 
     return 0;
 }
