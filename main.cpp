@@ -8,7 +8,7 @@ int RecursiveCalc(int time, int HourlyWage = 100) {
     if (time == 1) {
         return HourlyWage;
     }
-    return (RecursiveCalc(time - 1, HourlyWage * 2 - 50));
+    return HourlyWage + (RecursiveCalc(time - 1, HourlyWage * 2 - 50));
 }
 
 void ComparisonWage(int time) {
