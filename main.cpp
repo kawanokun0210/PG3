@@ -1,23 +1,25 @@
 ﻿#include <stdio.h>
 
-template <typename Type>
+template <class Type1, class Type2, class Type3 = Type1>
 
-Type Min(Type a, Type b) {
-	return a < b ? a : b;
-}
+class Compare {
+public:
 
-template<>
-char Min<char>(char a, char b) {
-	printf("数字以外は代入できません\n");
-	return 0;
-}
+	Compare(Type1 a, Type2 b) : a(a),b(b){}
+
+	Type3 Min() {
+		return a < b ? static_cast<Type3>(a) : static_cast<Type3>(b)
+	}
+
+private:
+	Type1 a;
+	Type2 b;
+};
 
 int main(void) {
 
-	printf("%d\n", Min<int>(1, 2));
-	printf("%f\n", Min<float>(1.0f, 2.0f));
-	printf("%lf\n", Min<double>(1.0, 3.0));
-	Min<char>('a', 'c');
+	Compare<int, float> Double(10, 12.0f);
+	printf("%f", Double.Min());
 
 	return 0;
 }
