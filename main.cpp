@@ -48,13 +48,13 @@ int main() {
 		printf("答え : %d\n", Result);
 		DiceResult(Result);
 		if (Result % 2 == 0 && Answer == 2) {
-			printf("勝ち\n");
+			printf("正解\n");
 		}
 		else if (Result % 2 == 1 && Answer == 1) {
-			printf("勝ち\n");
+			printf("正解\n");
 		}
 		else {
-			printf("負け\n");
+			printf("不正解\n");
 		}
 
 	}
