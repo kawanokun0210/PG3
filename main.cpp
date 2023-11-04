@@ -1,16 +1,19 @@
-﻿#include "Abroad.h"
-#include "Friend.h"
+﻿#include "Rectangle.h"
+#include "Circle.h"
 
 int main(void) {
 
-	Base* abroad;
-	Base* friends;
+	IShape* rectangle;
+	IShape* circle;
 
-	abroad = new Abroad();
-	friends = new Friend();
+	rectangle = new Rectangle(2.0f);
+	circle = new Circle(2.0f);
 
-	abroad->MeansOfTransportation();
-	friends->MeansOfTransportation();
+	rectangle->size();
+	circle->size();
+
+	rectangle->draw();
+	circle->draw();
 
 	return 0;
 }
