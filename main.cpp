@@ -1,6 +1,6 @@
 #include <stdio.h>
 
 int main(void) {
-	printf("UTF-8‚É‚È‚è‚Ü‚µ‚½\n");
+	printf("UTF-8ã«ãªã‚Šã¾ã—ãŸ\n");
 	return 0;
 }
