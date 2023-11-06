@@ -5,5 +5,5 @@ void Rectangle::size() {
 }
 
 void Rectangle::draw() {
-	printf("�Z�`�̖ʐς�%f�ł�\n", area);
+	printf("短形の面積は%fです\n", area);
 }

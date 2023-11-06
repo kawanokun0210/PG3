@@ -5,5 +5,5 @@ void Circle::size() {
 }
 
 void Circle::draw() {
-	printf("�~�̖ʐς�%f�ł�\n", area);
+	printf("円の面積は%fです\n", area);
 }
