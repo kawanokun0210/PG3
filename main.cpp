@@ -1,4 +1,4 @@
-﻿#include "Abroad.h"
+#include "Abroad.h"
 #include "Friend.h"
 
 int main(void) {
