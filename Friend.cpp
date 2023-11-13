@@ -1,5 +1,5 @@
 #include "Friend.h"
 
 void Friend::MeansOfTransportation() {
-	printf("—A‘—è’i‚Í©“]Ô‚â“k•à\n");
+	printf("è¼¸é€æ‰‹æ®µã¯è‡ªè»¢è»Šã‚„å¾’æ­©\n");
 }

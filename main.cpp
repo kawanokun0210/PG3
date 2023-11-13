@@ -3,8 +3,8 @@
 
 int main(void) {
 
-	Base* abroad;
-	Base* friends;
+	Transportation* abroad;
+	Transportation* friends;
 
 	abroad = new Abroad();
 	friends = new Friend();

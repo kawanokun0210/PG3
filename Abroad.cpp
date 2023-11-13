@@ -1,5 +1,5 @@
 #include "Abroad.h"
 
 void Abroad::MeansOfTransportation() {
-	printf("輸送手段は船か飛行機\n");
+	printf("霈ｸ騾∵焔谿ｵ縺ｯ闊ｹ縺矩｣幄｡梧ｩ歃n");
 }

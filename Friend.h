@@ -1,8 +1,8 @@
 #pragma once
-#include "Base.h"
+#include "Transportation.h"
 #include <stdio.h>
 
-class Friend : public Base
+class Friend : public Transportation
 {
 public:
 

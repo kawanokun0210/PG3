@@ -1,8 +1,8 @@
 #pragma once
-#include "Base.h"
+#include "Transportation.h"
 #include <stdio.h>
 
-class Abroad : public Base
+class Abroad : public Transportation
 {
 public:
 
