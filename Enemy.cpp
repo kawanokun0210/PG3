@@ -10,17 +10,17 @@ void Enemy::Update() {
 }
 
 void Enemy::Approach() {
-	printf("プレイヤーに近づく\n");
+	printf("繝励Ξ繧､繝､繝ｼ縺ｫ霑代▼縺十n");
 	std::this_thread::sleep_for(std::chrono::seconds(2));
 }
 
 void Enemy::Shot() {
-	printf("プレイヤーに向かって射撃\n");
+	printf("繝励Ξ繧､繝､繝ｼ縺ｫ蜷代°縺｣縺ｦ蟆�謦ソn");
 	std::this_thread::sleep_for(std::chrono::seconds(2));
 }
 
 void Enemy::Leave() {
-	printf("プレイヤーから離れていった\n");
+	printf("繝励Ξ繧､繝､繝ｼ縺九ｉ髮｢繧後※縺�縺｣縺歃n");
 	std::this_thread::sleep_for(std::chrono::seconds(2));
 }
 
