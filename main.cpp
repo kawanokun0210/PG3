@@ -1,57 +1,48 @@
 #include <stdio.h>
+#include <Windows.h>
+#include <algorithm>
+#include <cassert>
+#include <fstream>
 #include <iostream>
-#include <windows.h>
+#include <sstream>
 #include <list>
 using namespace std;
 
+struct StudentNumber {
+	string name;
+	string number;
+	string studentNumber;
+};
+
 int main() {
-	list<const char*> YamanoteLine = {
-	"Tokyo","Kanda","Akihabara",
-	"Okachimachi","Ueno","Uguisudani",
-	"Nippori","Tabata","Komagome",
-	"Sugamo","Otsuka","Ikebukuro",
-	"Mejiro","Takadanobaba","Shin-Okubo",
-	"Shinjuku","Yoyogi","Harajuku",
-	"Shibuya","Ebisu","Meguro",
-	"Gotanda","Osaki","Shinagawa",
-	"Tamachi","Hamatsucho","Shimbashi","Yurakucho"
-	};
+	list<StudentNumber> studentNumbers;
+	ifstream inputFile("PG3_05_02.txt");
+	assert(inputFile.is_open());
 
-	printf("1970\n");
-
-	for (list<const char*>::iterator itr = YamanoteLine.begin(); itr != YamanoteLine.end(); itr++) {
-		printf(*itr);
-		printf(",");
-	}
-
-	printf("\n");
-	printf("\n2019\n");
-
-	for (list<const char*>::iterator itr = YamanoteLine.begin(); itr != YamanoteLine.end(); itr++) {
-		if (*itr == "Tabata") {
-			itr = YamanoteLine.insert(itr, "Nishi-Nippori");
-			break;
+	string line;
+	while (getline(inputFile, line)) {
+		istringstream lineStream(line);
+		string account;
+		while (getline(lineStream, account, ',')) {
+			StudentNumber StudentNumber{};
+			StudentNumber.name = account;
+			string number = account.substr(2, 3);
+			string studentNumber = account.substr(6, 4);
+			StudentNumber.number = number.c_str();
+			StudentNumber.studentNumber = studentNumber.c_str();
+			studentNumbers.emplace_back(StudentNumber);
 		}
 	}
 
-	for (list<const char*>::iterator itr = YamanoteLine.begin(); itr != YamanoteLine.end(); itr++) {
-		printf(*itr);
-		printf(",");
-	}
+	inputFile.close();
 
-	printf("\n");
-	printf("\n2022\n");
-
-	for (list<const char*>::iterator itr = YamanoteLine.begin(); itr != YamanoteLine.end(); itr++) {
-		if (*itr == "Tamachi") {
-			itr = YamanoteLine.insert(itr, "Takanawa-Gateway");
-			break;
+	studentNumbers.sort([](const StudentNumber& a, const StudentNumber& b) {
+		return  atoi((a.number + a.studentNumber).c_str()) < atoi((b.number + b.studentNumber).c_str());
 		}
-	}
+	);
 
-	for (list<const char*>::iterator itr = YamanoteLine.begin(); itr != YamanoteLine.end(); itr++) {
-		printf(*itr);
-		printf(",");
+	for (auto& accountName : studentNumbers) {
+		cout << accountName.name << endl;
 	}
 
 	return 0;
