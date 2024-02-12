@@ -1,16 +1,16 @@
-#include "Abroad.h"
-#include "Friend.h"
+#include "Elephant.h"
+#include "Hamster.h"
 
 int main(void) {
 
-	Transportation* abroad;
-	Transportation* friends;
+	Animal* hamster;
+	Animal* elephant;
 
-	abroad = new Abroad();
-	friends = new Friend();
+	hamster = new Hamster();
+	elephant = new Elephant();
 
-	abroad->MeansOfTransportation();
-	friends->MeansOfTransportation();
+	hamster->Size();
+	elephant->Size();
 
 	return 0;
 }

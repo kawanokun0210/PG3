@@ -129,14 +129,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Abroad.cpp" />
-    <ClCompile Include="Friend.cpp" />
+    <ClCompile Include="Hamster.cpp" />
+    <ClCompile Include="Elephant.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Abroad.h" />
-    <ClInclude Include="Transportation.h" />
-    <ClInclude Include="Friend.h" />
+    <ClInclude Include="Hamster.h" />
+    <ClInclude Include="Animal.h" />
+    <ClInclude Include="Elephant.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
